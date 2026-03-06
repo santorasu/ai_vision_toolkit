@@ -76,6 +76,22 @@ class HomeScreen extends ConsumerWidget {
       color: Color(0xFF0097A7),
       bgColor: Color(0xFFE0F7FA),
     ),
+    _ToolItem(
+      icon: Icons.color_lens_rounded,
+      title: AppString.colorDetection,
+      subtitle: AppString.colorDetectionDesc,
+      route: RouteName.colorDetectionRoute,
+      color: Color(0xFFF9A825),
+      bgColor: Color(0xFFFFF9C4),
+    ),
+    _ToolItem(
+      icon: Icons.category_rounded,
+      title: AppString.objectDetection,
+      subtitle: AppString.objectDetectionDesc,
+      route: RouteName.objectDetectionRoute,
+      color: Color(0xFFAD1457),
+      bgColor: Color(0xFFF8BBD0),
+    ),
   ];
 
   @override
@@ -130,20 +146,14 @@ class HomeScreen extends ConsumerWidget {
         title: Text(
           AppString.dashboard,
           style: TextStyle(
-            color: Colors.white,
-            fontSize: 16.sp,
-            fontWeight: FontWeight.bold,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? Colors.white
+                : ColorManager.titleText,
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w700,
           ),
         ),
-        background: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF00136B), Color(0xFF1A237E)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-        ),
+        background: Container(color: Theme.of(context).scaffoldBackgroundColor),
       ),
       actions: [
         IconButton(
@@ -160,16 +170,16 @@ class HomeScreen extends ConsumerWidget {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFF00136B), Color(0xFF3949AB)],
+          colors: [ColorManager.primary, ColorManager.primaryLight],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: ColorManager.primary.withValues(alpha: 0.3),
+            color: ColorManager.primaryLight.withValues(alpha: 0.3),
             blurRadius: 16,
-            offset: const Offset(0, 6),
+            offset: const Offset(0, 8),
           ),
         ],
       ),
@@ -207,7 +217,7 @@ class HomeScreen extends ConsumerWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
-                    '6 AI Tools Available',
+                    '8 AI Tools Available',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 11.sp,
@@ -247,12 +257,12 @@ class HomeScreen extends ConsumerWidget {
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: tool.color.withValues(alpha: 0.12),
-              blurRadius: 12,
-              offset: const Offset(0, 4),
+              color: ColorManager.shadowColor,
+              blurRadius: 16,
+              offset: const Offset(0, 6),
             ),
           ],
-          border: Border.all(color: tool.color.withValues(alpha: 0.15)),
+          border: Border.all(color: ColorManager.borderColor, width: 0.5),
         ),
         child: Padding(
           padding: const EdgeInsets.all(16),

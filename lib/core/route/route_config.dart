@@ -21,6 +21,12 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const PoseDetectionScreen());
       case RouteName.documentScannerRoute:
         return MaterialPageRoute(builder: (_) => const DocumentScannerScreen());
+      case RouteName.colorDetectionRoute:
+        return MaterialPageRoute(builder: (_) => const ColorDetectionScreen());
+      case RouteName.objectDetectionRoute:
+        return MaterialPageRoute(builder: (_) => const ObjectDetectionScreen());
+      case RouteName.cameraRoute:
+        return MaterialPageRoute(builder: (_) => const CameraScreen());
       case RouteName.historyRoute:
         return MaterialPageRoute(builder: (_) => const HistoryScreen());
       case RouteName.settingsRoute:

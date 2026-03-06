@@ -5,6 +5,7 @@ import '../../../core/constansts/color_manger.dart';
 import '../../../core/resource/app_strings.dart';
 import '../../home/view/home_screen.dart';
 import '../../history/view/history_screen.dart';
+import '../../camera/view/camera_screen.dart';
 import '../../settings/view/settings_screen.dart';
 import '../viewmodel/bottom_nav_provider.dart';
 
@@ -14,6 +15,7 @@ class BottomNavBarScreen extends ConsumerWidget {
   static const List<Widget> _screens = [
     HomeScreen(),
     HistoryScreen(),
+    CameraScreen(),
     SettingsScreen(),
   ];
 
@@ -29,6 +31,11 @@ class BottomNavBarScreen extends ConsumerWidget {
       label: AppString.history,
     ),
     BottomNavigationBarItem(
+      icon: Icon(Icons.camera_alt_rounded),
+      activeIcon: Icon(Icons.camera_alt_rounded),
+      label: AppString.camera,
+    ),
+    BottomNavigationBarItem(
       icon: Icon(Icons.settings_rounded),
       activeIcon: Icon(Icons.settings_rounded),
       label: AppString.settings,
@@ -42,14 +49,10 @@ class BottomNavBarScreen extends ConsumerWidget {
     return Scaffold(
       body: IndexedStack(index: currentIndex, children: _screens),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.08),
-              blurRadius: 12,
-              offset: const Offset(0, -3),
-            ),
-          ],
+        decoration: const BoxDecoration(
+          border: Border(
+            top: BorderSide(color: ColorManager.borderColor, width: 0.5),
+          ),
         ),
         child: BottomNavigationBar(
           currentIndex: currentIndex,
