@@ -149,12 +149,13 @@ class _HistoryScreenState extends ConsumerState<HistoryScreen> {
           color: Theme.of(context).brightness == Brightness.dark
               ? const Color(0xFF1E1E2E)
               : Colors.white,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: ColorManager.borderColor),
-          boxShadow: [
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: ColorManager.borderColor, width: 0.5),
+          boxShadow: const [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.03),
-              blurRadius: 8,
+              color: ColorManager.shadowColor,
+              blurRadius: 16,
+              offset: Offset(0, 4),
             ),
           ],
         ),
