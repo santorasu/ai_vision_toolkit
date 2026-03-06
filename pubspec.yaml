@@ -1,0 +1,54 @@
+name: ai_vision_toolkit
+description: "AI Vision Toolkit - Multi-feature AI utility app with Google ML Kit."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State management
+  flutter_riverpod: ^3.2.1
+  riverpod: ^3.2.1
+
+  # ML Kit & Camera
+  google_ml_kit: ^0.21.0
+  camera: ^0.12.0
+  image_picker: ^1.2.1
+
+  # Permissions
+  permission_handler: ^12.0.1
+
+  # Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.5
+
+  # Utilities
+  uuid: ^4.5.3
+  intl: ^0.20.2
+  share_plus: ^10.1.4
+  shared_preferences: ^2.5.4
+
+  # UI
+  flutter_screenutil: ^5.9.3
+
+  # Network (kept from original)
+  dio: ^5.9.2
+  connectivity_plus: ^7.0.0
+  fluttertoast: ^9.0.0
+  file_picker: ^10.3.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
