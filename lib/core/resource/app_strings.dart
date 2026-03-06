@@ -43,6 +43,7 @@ class AppString {
   static const String saved = "Saved to history!";
   static const String processing = "Processing...";
   static const String pickImage = "Pick Image";
+  static const String cameraTab = "Camera";
   static const String camera = "Camera";
   static const String gallery = "Gallery";
 
@@ -78,6 +79,8 @@ class AppString {
   static const String imageLabeling = "Image Labeling";
   static const String poseDetection = "Pose Detection";
   static const String documentScanner = "Document Scanner";
+  static const String colorDetection = "Color Detection";
+  static const String objectDetection = "Object Detection";
 
   // Tool descriptions
   static const String textRecognitionDesc =
@@ -87,6 +90,9 @@ class AppString {
   static const String imageLabelingDesc = "Identify objects in images";
   static const String poseDetectionDesc = "Detect body pose and landmarks";
   static const String documentScannerDesc = "Scan documents and export as text";
+  static const String colorDetectionDesc =
+      "Identify dominant colors in an image";
+  static const String objectDetectionDesc = "Detect multiple objects in images";
 
   // Text Recognition
   static const String extractedText = "Extracted Text";
@@ -134,6 +140,16 @@ class AppString {
   static const String noDocumentFound = "No text found in document";
   static const String saveDocument = "Save Document";
 
+  // Color Detection
+  static const String primaryColor = "Primary Color";
+  static const String colorPalette = "Color Palette";
+  static const String noColorFound = "No colors detected";
+
+  // Object Detection
+  static const String objectsDetected = "Objects Detected";
+  static const String noObjectsFound = "No objects detected";
+  static const String objectLabels = "Object Labels";
+
   // History
   static const String scanHistoryTitle = "Scan History";
   static const String noHistory = "No History Yet";
@@ -149,6 +165,8 @@ class AppString {
   static const String historyDocument = "Document Scan";
   static const String historyFace = "Face Detection";
   static const String historyPose = "Pose Detection";
+  static const String historyColor = "Color Detection";
+  static const String historyObject = "Object Detection";
 
   // Settings
   static const String settingsTitle = "Settings";
