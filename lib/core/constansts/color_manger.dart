@@ -6,12 +6,12 @@ class ColorManager {
   ColorManager._();
 
   // ===== Primary Colors =====
-  static const Color primary = Color(0xFF00136B);
-  static const Color primaryLight = Color(0xFF334289);
-  static const Color primaryDark = Color(0xFF000C48);
+  static const Color primary = Color(0xFF4A6FFF);
+  static const Color primaryLight = Color(0xFF7C8CFF);
+  static const Color primaryDark = Color(0xFF2848D3);
 
   // ===== Background Colors =====
-  static const Color background = Color(0xFFF5F5F5);
+  static const Color background = Color(0xFFF5F7FF);
   static const Color backgroundDark = Color(0xFF121212);
   static const Color scaffoldLight = Color(0xFFFFFFFF);
   static const Color scaffoldDark = Color(0xFF1E1E1E);

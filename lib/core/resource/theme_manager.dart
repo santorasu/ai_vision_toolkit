@@ -31,21 +31,23 @@ ThemeData _buildLightTheme() {
 
     cardTheme: CardThemeData(
       color: ColorManager.whiteColor,
-      shadowColor: ColorManager.subtitleText,
-      elevation: AppSize.s4,
+      shadowColor: ColorManager.shadowColor,
+      elevation: 0,
+      margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppSize.s8),
+        borderRadius: BorderRadius.circular(16),
+        side: const BorderSide(color: ColorManager.borderColor, width: 0.5),
       ),
     ),
 
     appBarTheme: AppBarTheme(
       centerTitle: true,
-      backgroundColor: ColorManager.primary,
-      elevation: AppSize.s4,
-      iconTheme: IconThemeData(color: ColorManager.whiteColor),
+      backgroundColor: ColorManager.background,
+      elevation: 0,
+      iconTheme: IconThemeData(color: ColorManager.primary),
       titleTextStyle: getSemiBold600Style12(
-        color: ColorManager.whiteColor,
-        fontSize: FontSize.s16,
+        color: ColorManager.titleText,
+        fontSize: FontSize.s18,
       ),
     ),
 
@@ -64,9 +66,8 @@ ThemeData _buildLightTheme() {
           color: ColorManager.whiteColor,
           fontSize: FontSize.s16,
         ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppSize.s8),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        elevation: 0,
         padding: const EdgeInsets.symmetric(
           horizontal: AppPadding.p16,
           vertical: AppPadding.p12,
@@ -137,7 +138,7 @@ ThemeData _buildLightTheme() {
           color: ColorManager.errorColor,
           width: AppSize.s1_5,
         ),
-        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
       ),
     ),
 

@@ -14,6 +14,9 @@ class RouteName {
   static const String imageLabelingRoute = "/imageLabeling";
   static const String poseDetectionRoute = "/poseDetection";
   static const String documentScannerRoute = "/documentScanner";
+  static const String colorDetectionRoute = "/colorDetection";
+  static const String objectDetectionRoute = "/objectDetection";
+  static const String cameraRoute = "/camera";
   static const String historyRoute = "/history";
   static const String settingsRoute = "/settings";
 }

@@ -35,6 +35,11 @@ class HistoryNotifier extends Notifier<HistoryState> {
     state = const HistoryState();
   }
 
+  Future<void> save(String type, String result) async {
+    await _repo.add(type: type, result: result);
+    refresh();
+  }
+
   void refresh() {
     state = state.copyWith(items: _repo.search(state.query));
   }
